@@ -1,0 +1,311 @@
+.admin-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: #6c63ff;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar .logo {
+  margin-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* RIGHT CONTENT */
+.admin-content {
+  flex: 1;
+  padding: 30px;
+  background: #f8f9fd;
+}
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.add-btn {
+  background: linear-gradient(135deg, #ff9c1a, #ffb347);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #6c63ff;
+  color: white;
+}
+.edit {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.dashboard-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+}
+.admin-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.admin-form button {
+  background: linear-gradient(135deg, #ff9c1a, #ffb347);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eef3f8;
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  color: #6c63ff;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(135deg, #ff9c1a, #ffb347);
+  border: none;
+  color: white;
+
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 1200px) {
+
+  .admin-container {
+    flex-direction: row;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .admin-content {
+    padding: 25px;
+  }
+}
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 180px;
+    padding: 15px;
+  }
+
+  .menu a {
+    font-size: 14px;
+  }
+
+  .admin-content {
+    padding: 20px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+
+  .admin-container {
+    flex-direction: column; /* ✅ stack sidebar top */
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .add-btn {
+    width: fit-content;
+  }
+
+  .admin-form {
+    max-width: 100%;
+  }
+}
+@media (max-width: 576px) {
+
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .menu a {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .admin-content {
+    padding: 15px;
+  }
+
+  .admin-table {
+    display: block;
+    overflow-x: auto; /* ✅ scroll table */
+  }
+
+  .admin-table th,
+  .admin-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .admin-form {
+    padding: 20px;
+  }
+
+  .admin-form input,
+  .admin-form textarea {
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+
+  .sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .menu a {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  .admin-content {
+    padding: 15px;
+  }
+
+  .admin-table {
+    display: block;
+    overflow-x: auto; /* ✅ scroll table */
+  }
+
+  .admin-table th,
+  .admin-table td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .admin-form {
+    padding: 20px;
+  }
+
+  .admin-form input,
+  .admin-form textarea {
+    padding: 10px;
+  }
+}

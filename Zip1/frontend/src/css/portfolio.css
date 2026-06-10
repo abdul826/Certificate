@@ -1,0 +1,491 @@
+.portfolio-section {
+  position: relative;
+}
+
+/* ✅ TOP PURPLE SECTION */
+.portfolio-top {
+  background: linear-gradient(135deg, #6c63ff, #7a47ff);
+  padding: 80px 0 200px;
+  text-align: center;
+  color: white;
+}
+
+.portfolio-top h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tabs span {
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tabs .active {
+  color: orange;
+  opacity: 1;
+}
+
+/* ✅ CARDS CONTAINER */
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  padding: 0 80px;
+  margin-top: -150px; /* ✅ overlap effect */
+}
+
+/* ✅ CARD */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ BIG CARD */
+.portfolio-card.big {
+  grid-column: span 2;
+  height: 280px;
+}
+
+.portfolio-card:not(.big) {
+  height: 280px;
+}
+
+/* ✅ OVERLAY */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: white;
+
+  transition: 0.3s;
+}
+
+.portfolio-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* LEFT TEXT */
+.card-overlay h4 {
+  margin-bottom: 5px;
+}
+
+/* RIGHT BUTTON */
+.card-overlay .right {
+  width: 40px;
+  height: 40px;
+  background: orange;
+  color: white;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ SHAPES */
+.shape {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid orange;
+}
+
+/* D SHAPE (left side) */
+.d-shape {
+  left: 50px;
+  top: 150px;
+  border-radius: 50% 0 0 50%;
+  animation: float 4s infinite;
+}
+
+/* U SHAPE (right side) */
+.u-shape {
+  right: 80px;
+  bottom: 120px;
+  border-radius: 0 0 50% 50%;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+
+  width: 500px;
+  max-height: 80vh;   /* ✅ scrollable height */
+  overflow-y: auto;   /* ✅ scrolling enable */
+
+  position: relative;
+}
+.modal-box img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.modal-box img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* Media Query */
+.portfolio-section {
+  position: relative;
+}
+
+/* ✅ TOP PURPLE SECTION */
+.portfolio-top {
+  background: linear-gradient(135deg, #6c63ff, #7a47ff);
+  padding: 80px 0 200px;
+  text-align: center;
+  color: white;
+}
+
+.portfolio-top h1 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.tabs {
+  margin-top: 20px;
+}
+
+.tabs span {
+  margin: 0 15px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tabs .active {
+  color: orange;
+  opacity: 1;
+}
+
+/* ✅ CARDS CONTAINER */
+.portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+
+  padding: 0 80px;
+  margin-top: -150px; /* ✅ overlap effect */
+}
+
+/* ✅ CARD */
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ✅ BIG CARD */
+.portfolio-card.big {
+  grid-column: span 2;
+  height: 280px;
+}
+
+.portfolio-card:not(.big) {
+  height: 280px;
+}
+
+/* ✅ OVERLAY */
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  color: white;
+
+  transition: 0.3s;
+}
+
+.portfolio-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* LEFT TEXT */
+.card-overlay h4 {
+  margin-bottom: 5px;
+}
+
+/* RIGHT BUTTON */
+.card-overlay .right {
+  width: 40px;
+  height: 40px;
+  background: orange;
+  color: white;
+
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ SHAPES */
+.shape {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid orange;
+}
+
+/* D SHAPE (left side) */
+.d-shape {
+  left: 50px;
+  top: 150px;
+  border-radius: 50% 0 0 50%;
+  animation: float 4s infinite;
+}
+
+/* U SHAPE (right side) */
+.u-shape {
+  right: 80px;
+  bottom: 120px;
+  border-radius: 0 0 50% 50%;
+  animation: float 5s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 999;
+}
+.modal-box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+
+  width: 500px;
+  max-height: 80vh;   /* ✅ scrollable height */
+  overflow-y: auto;   /* ✅ scrolling enable */
+
+  position: relative;
+}
+.modal-box img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.modal-box img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+@media (max-width: 992px) {
+
+  .portfolio-top {
+    padding: 60px 0 150px;
+  }
+
+  .portfolio-top h1 {
+    font-size: 30px;
+  }
+
+  .portfolio-cards {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns */
+    padding: 0 40px;
+    margin-top: -120px;
+  }
+
+  .portfolio-card.big {
+    grid-column: span 2; /* ✅ full width card */
+  }
+
+  .tabs span {
+    margin: 0 10px;
+  }
+
+  .d-shape {
+    left: 30px;
+  }
+
+  .u-shape {
+    right: 30px;
+  }
+}
+@media (max-width: 768px) {
+
+  .portfolio-top {
+    padding: 50px 0 130px;
+  }
+
+  .portfolio-top h1 {
+    font-size: 26px;
+  }
+
+  .portfolio-cards {
+    grid-template-columns: 1fr; /* ✅ single column */
+    padding: 0 30px;
+    margin-top: -100px;
+  }
+
+  .portfolio-card.big {
+    grid-column: span 1; /* ✅ reset */
+  }
+
+  .portfolio-card {
+    height: 240px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tabs span {
+    margin: 0;
+  }
+
+  .d-shape,
+  .u-shape {
+    display: none; /* ✅ avoid clutter */
+  }
+}
+@media (max-width: 576px) {
+
+  .portfolio-top {
+    padding: 40px 0 100px;
+  }
+
+  .portfolio-top h1 {
+    font-size: 22px;
+  }
+
+  .portfolio-cards {
+    padding: 0 20px;
+    margin-top: -80px;
+  }
+
+  .portfolio-card {
+    height: 200px;
+  }
+
+  .card-overlay {
+    padding: 15px;
+  }
+
+  .card-overlay h4 {
+    font-size: 16px;
+  }
+
+  .card-overlay p {
+    font-size: 13px;
+  }
+
+  .right {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+
+  .portfolio-top {
+    padding: 35px 0 90px;
+  }
+
+  .portfolio-top h1 {
+    font-size: 18px;
+  }
+
+  .portfolio-top h5 {
+    font-size: 14px;
+  }
+
+  .portfolio-cards {
+    padding: 0 15px;
+    margin-top: -70px;
+  }
+
+  .portfolio-card {
+    height: 180px;
+  }
+
+  .modal-box {
+    width: 90%; /* ✅ responsive modal */
+    padding: 20px;
+  }
+
+  .modal-box h2 {
+    font-size: 18px;
+  }
+
+  .modal-box p {
+    font-size: 13px;
+  }
+}
